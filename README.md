@@ -134,6 +134,7 @@ Type the following command to run the script.
 go run scenario_creator_file_delete.go
 ```
 After you have done this command, you will see like this output if it is completely successful.
+
 ![output](photo/creator-file-delete-output.png)
 
 **Step 3: Checking**
@@ -156,3 +157,48 @@ After you have done this command, you will see like this output if it is complet
 ![output](photo/executor-file-delete-output.png)
 
 When I checked it in github, I can see deleted files (cluster_m/file_0001) in there.
+
+## 7\. Procedure Steps \[Folder Delete Function\]
+
+**Step 1: Checking & Updating**
+
+Type the following commands to check this script.
+
+```
+vi scenario_creator_folder_delete.go
+```
+
+If you wanna change CSV file name and target folders, you can check on line (10, 14 and 15).
+
+![folder-1](photo/creator-folder-delete-1.png)
+
+**Step 2: Running**
+
+Type the following command to run the script.
+
+```
+go run scenario_creator_folder_delete.go
+```
+After you have done this command, you will see like this output if it is completely successful.
+
+![output](photo/creator-folder-delete-output.png)
+
+**Step 3: Checking**
+
+Type the following commands to check this script.
+
+```
+vi scenario_executor_folder_delete.go
+```
+**Step 4: Running**
+
+Type the following command to run the script.
+
+```
+go run scenario_executor_folder_delete.go --repo csv-go-git-ops --scenario scenario_folder_delete_k.csv --username airitech-soe --token ghp_UzCBGAKJlxxxxxxxxxx
+```
+After you have done this command, you will see like this output if it is completely successful.
+
+![output](photo/executor-folder-delete-output.png)
+
+When I checked it in github, I can see deleted files (cluster_k/cluster_0001) in there.
